@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KIWISEduTech Payment</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* NAVIGATION */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00ff88;
+}
+
+/* HEADER */
+.header{
+    margin-top:70px;
+    background:linear-gradient(135deg,#0d47a1,#00bcd4);
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.header h1{
+    font-size:40px;
+}
+
+.header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    display:flex;
+    gap:30px;
+}
+
+/* PAYMENT FORM */
+.payment-box{
+    flex:2;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.payment-box h2{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#00bcd4;
+}
+
+/* RIGHT PANEL */
+.summary{
+    flex:1;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    height:fit-content;
+}
+
+.summary h3{
+    margin-bottom:20px;
+}
+
+.summary p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.security{
+    margin-top:30px;
+    background:#f0f8ff;
+    padding:20px;
+    border-radius:10px;
+    line-height:2;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    background:#00c853;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#009624;
+}
+
+/* NOTIFICATION */
+#notification{
+    display:none;
+    position:fixed;
+    top:100px;
+    right:20px;
+    background:#00c853;
+    color:white;
+    padding:20px 30px;
+    border-radius:10px;
+    z-index:2000;
+    animation:slide .5s;
+}
+
+@keyframes slide{
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* STATS */
+.stats{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    flex:1;
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card h1{
+    color:#00bcd4;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+
+    nav{
+        flex-direction:column;
+        height:auto;
+        padding:15px;
+    }
+
+    nav ul{
+        margin-top:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="notification">
+    ✅ Payment Successful!
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+
+    <div class="logo">
+        KIWISEduTech
+    </div>
+
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="prices.html">Price</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="payment.html">Payment</a></li>
+    </ul>
+
+</nav>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Secure Course Payment</h1>
+    <p>Complete your enrollment securely</p>
+</div>
+
+<div class="container">
+
+    <!-- PAYMENT -->
+    <div class="payment-box">
+
+        <h2>Payment Details</h2>
+
+        <form id="paymentForm">
+
+            <label>Student Name</label>
+            <input type="text" required>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Mobile Number</label>
+            <input type="tel" required>
+
+            <label>Course</label>
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option value="15000">IoT</option>
+                <option value="10000">Artificial Intelligence</option>
+                <option value="15000">Full Stack Development</option>
+                <option value="15000">Data Analytics</option>
+                <option value="12000">Machine Learning</option>
+            </select>
+
+            <label>Course Fee (₹)</label>
+            <input type="number" id="amount" readonly>
+
+            <label>Card Number</label>
+            <input type="text"
+                   maxlength="16"
+                   placeholder="Enter card number"
+                   required>
+
+            <label>Expiry Date</label>
+            <input type="month" required>
+
+            <label>CVV</label>
+            <input type="password"
+                   maxlength="3"
+                   required>
+
+            <button type="submit">
+                Pay Now
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+
+        <h3>Payment Summary</h3>
+
+        <p>
+            Course Fee:
+            <span id="fee">₹0</span>
+        </p>
+
+        <p>
+            GST (18%):
+            <span id="gst">₹0</span>
+        </p>
+
+        <p>
+            <b>
+                Total:
+                <span id="total">₹0</span>
+            </b>
+        </p>
+
+        <div class="security">
+            🔒 SSL Secured Payment<br>
+            ✅ PCI DSS Compliant<br>
+            🛡️ Safe Transactions
+        </div>
+
+    </div>
+
+</div>
+
+<!-- STATS -->
+<div class="stats">
+
+    <div class="card">
+        <h1>500+</h1>
+        <p>Students</p>
+    </div>
+
+    <div class="card">
+        <h1>50+</h1>
+        <p>Courses</p>
+    </div>
+
+    <div class="card">
+        <h1>95%</h1>
+        <p>Placement Support</p>
+    </div>
+
+</div>
+
+<script>
+const course=document.getElementById("course");
+
+course.addEventListener("change",function(){
+
+    let fee=parseInt(this.value)||0;
+    let gst=fee*0.18;
+    let total=fee+gst;
+
+    document.getElementById("amount").value=fee;
+    document.getElementById("fee").innerHTML="₹"+fee;
+    document.getElementById("gst").innerHTML="₹"+gst;
+    document.getElementById("total").innerHTML="₹"+total;
+});
+
+const form=document.getElementById("paymentForm");
+const notification=document.getElementById("notification");
+
+form.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    notification.style.display="block";
+
+    form.reset();
+
+    document.getElementById("amount").value="";
+    document.getElementById("fee").innerHTML="₹0";
+    document.getElementById("gst").innerHTML="₹0";
+    document.getElementById("total").innerHTML="₹0";
+
+    setTimeout(function(){
+        notification.style.display="none";
+    },3000);
+});
+</script>
+
+</body>
+</html>

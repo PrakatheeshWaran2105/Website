@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KIWIS EduTech</title>
+    
+</head>
+<body>
+   <!-- Offer Bar -->
+<div class="offer-bar">
+    <marquee behavior="scroll" direction="left" scrollamount="8" loop="-1">
+        🎉 Special Offer: Get 10% Discount for College Students! Enroll Now! 🥳
+        🎉 Special Offer: Get 10% Discount for College Students! Enroll Now! 🥳
+        🎉 Special Offer: Get 10% Discount for College Students! Enroll Now! 🥳
+        🎉 Special Offer: Get 10% Discount for College Students! Enroll Now! 🥳
+    </marquee>
+</div>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>KIWISeduTech</span>
+        </div>
+        <ul>
+            <li><a class="active" href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="prices.html">Prices</a></li>
+            <li><a href="contact.html">Contact</a></li>
+             <li><a href="payment.html">Payment</a></li>
+
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                EMPOWERING MINDS.<br>
+                <span>BUILDING FUTURES.</span>
+            </h1>
+            <p>Learn Industry Ready Skills with Expert Trainers</p>
+            <a href="contact.html" class="btn">Apply Now</a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-card">
+            <div class="icon">📘</div>
+            <p>
+                KIWI EduTech provides professional training
+                in Full Stack Development, AI, IoT,
+                Data Analytics, Embedded Systems and
+                modern technologies with practical learning.
+            </p>
+        </div>
+    </section>
+    <section class="courses">
+     <div class="course-slider">
+
+    <div class="card">
+        <img src="fullstack.jpg">
+        <h3>FullStack Development</h3>
+        <p>Modelus:9</p>
+        <a href="fullstack.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card">
+        <img src="Ai.avif">
+        <h3>Artificial Intelligence</h3>
+        <p>Modelus:9</p>
+        <a href="ai.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card">
+        <img src="iot.jpg">
+        <h3>Internet of Things</h3>
+        <p>Modelus:9</p>
+        <a href="iot.html" class="btn">View Details</a>
+    </div>
+     <div class="card">
+        <img src="embedded.webp">
+        <h3>Internet of Things</h3>
+        <p>Modelus:9</p>
+        <a href="embedded.html" class="btn">View Details</a>
+    </div>
+     <div class="card">
+        <img src="powerbi.webp">
+        <h3>Internet of Things</h3>
+        <p>Modelus:9</p>
+        <a href="powerbi.html" class="btn">View Details</a>
+    </div>
+     
+
+</div>
+
+    </div>
+</div>
+    </section>
+    <section class="features">
+
+        <div class="feature">✓ Industry Experts</div>
+        <div class="feature">✓ Hands-on Training</div>
+        <div class="feature">✓ Internship Support</div>
+        <div class="feature">✓ Placement Assistance</div>
+    </section>
+    <section class="stats">
+        <div>
+            <h2>10+</h2>
+            <p>Courses</p>
+        </div>
+        <div>
+            <h2>100+</h2>
+            <p>Projects</p>
+        </div>
+        <div>
+            <h2>95%</h2>
+            <p>Success Rate</p>
+        </div>
+    </section>
+    <footer>
+        &copy; 2026 KIWI EduTech. All Rights Reserved.
+    </footer>
+
+</body>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #f5f5f5;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #000;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.2s;
+        }
+        nav ul li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0%;
+  height:2px;
+  background:#00bfff;
+  transition:0.3s;
+}
+
+        nav ul li a:hover {
+            color: #00bfff;
+        }
+.offer-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ff9800;
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1001;
+}
+
+nav{
+    top: 40px; 
+}
+
+        .hero {
+            margin-top: 80px;
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            padding-left: 100px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #00bfff;
+        }
+
+        .hero p {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .course-slider{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;     
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+.card{
+    flex-shrink: 0;
+    width: 250px;
+}
+
+.course-slider::-webkit-scrollbar{
+    height: 8px;
+}
+
+
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+        .btn {
+            background: #00c853;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #009624;
+        }
+        .about {
+            padding: 40px;
+        }
+
+        .about-card {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #ddd;
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            font-size: 50px;
+        }
+        .courses{
+    width:90%;
+    margin:40px auto;
+}
+
+.course-slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:20px 0;
+}
+
+.course-slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.card{
+    width:250px;
+    flex-shrink:0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 15px #ddd;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3,
+.card p{
+    padding:15px;
+}
+
+.card .btn{
+    display:block;
+    width:fit-content;
+    margin:20px auto;
+}.features{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.feature{
+    background: #eaf7ec;
+    padding: 20px;     
+    border-radius: 8px;
+    font-size: 14px;         
+    font-weight: bold;
+    width: 160px;         
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.feature:hover{
+    transform: translateY(-5px);
+}
+        .stats {
+            background: #050505;
+            color: white;
+            margin-top: 50px;
+            padding: 50px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            column-gap: 10px;
+        }
+
+        .stats h2 {
+            color: #00bfff;
+            font-size: 60px;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</html>
